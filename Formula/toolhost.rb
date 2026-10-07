@@ -5,20 +5,20 @@
 class Toolhost < Formula
   desc "One governed front door between your agent and your MCP servers"
   homepage "https://github.com/gettoolhost/toolhost-local"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/gettoolhost/toolhost-local/releases/download/v0.0.1/toolhost_darwin_amd64.tar.gz"
-      sha256 "aa56775469fce7462a37245b405c7054e9c2ed838266722b6379420db0282c7d"
+      url "https://github.com/gettoolhost/toolhost-local/releases/download/v0.0.2/toolhost_darwin_amd64.tar.gz"
+      sha256 "b67cf0f72d8a8bf2c174eee0cf9fcda41be008e976a29899903afd51a08d7620"
 
       define_method(:install) do
         bin.install "toolhost"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/gettoolhost/toolhost-local/releases/download/v0.0.1/toolhost_darwin_arm64.tar.gz"
-      sha256 "22e75f91cd53b907cb06ceeef535f46f00da06dc0dd345c43eda6a1a74b728df"
+      url "https://github.com/gettoolhost/toolhost-local/releases/download/v0.0.2/toolhost_darwin_arm64.tar.gz"
+      sha256 "35ef7a8ad3971f0cf07e45d1dd38d2bd378a44a9517e7d74f0eda41c51549612"
 
       define_method(:install) do
         bin.install "toolhost"
@@ -28,15 +28,15 @@ class Toolhost < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gettoolhost/toolhost-local/releases/download/v0.0.1/toolhost_linux_amd64.tar.gz"
-      sha256 "e9b37276bbb637e690dc67e0274601da764d5657989d4d366a55bdec1e6d02c3"
+      url "https://github.com/gettoolhost/toolhost-local/releases/download/v0.0.2/toolhost_linux_amd64.tar.gz"
+      sha256 "56e8d98f3433286f5eba7237f0a165940b44df38b30aa769510590fca7304394"
       define_method(:install) do
         bin.install "toolhost"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/gettoolhost/toolhost-local/releases/download/v0.0.1/toolhost_linux_arm64.tar.gz"
-      sha256 "daaaacc5515acdf535f4ecc31dc0d78db6f89fa017647fe4bf206a62d353048c"
+      url "https://github.com/gettoolhost/toolhost-local/releases/download/v0.0.2/toolhost_linux_arm64.tar.gz"
+      sha256 "d284b1e87b2c104f1c04125e31ea2feec6ce3b4d51df45afad169836c8792e67"
       define_method(:install) do
         bin.install "toolhost"
       end
